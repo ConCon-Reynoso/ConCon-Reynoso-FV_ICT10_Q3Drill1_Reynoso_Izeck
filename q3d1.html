@@ -1,0 +1,51 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <script defer src="https://pyscript.net/releases/2024.2.1/pyscript.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>lists</title>    
+</head>
+<body>
+    <table bgcolor="navy blue" align="center" width="100%">
+    <tr>
+        <td align="left"> O.B. Montessori Center - Fairview Campus</td>
+        <td align="right">
+            <a class="menulink" href="index.html">Home</a> | <a class="menulink" href="sw2index.html">Grade Calculator</a> | <a class="menulink" href="q2st.html">Clubs</a>
+        </td>
+    </tr>
+</table>
+    <form action="/submit" method="post">
+    <h1>Student Grade Calculator</h1>
+    <label>First Name:</label>
+    <input id="first_name" placeholder="input your first name"><br><br>
+    <label>Last Name:</label>
+    <input id="last_name" placeholder="input your last name"><br><br><b>Input your grades for the following subjects below:</b><br><br>
+    <label>Science:</label>
+    <input id="science_grade" placeholder="input science grade"><br><br>
+    <label>Math:</label>
+    <input id="math_grade" placeholder="input math grade"><br><br>
+    <label>English:</label>
+    <input id="english_grade" placeholder="input english grade"><br><br>
+    <label>Filipino:</label>
+    <input id="filipino_grade" placeholder="input filipino grade"><br><br>
+    <label>ICT:</label>
+    <input id="ict_grade" placeholder="input ict grade"><br><br>
+    <label>PE:</label>
+    <input id="pe_grade" placeholder="input pe grade"><br><br>
+    <br><br>
+    <button type="button" id="general_weighted_average">Calculate GWA</button>
+    <pre id="student_info"></pre>
+    <pre id="summary"></pre>
+    <pre id="output"></pre>
+    <pre id="status"></pre>
+
+    </form>
+     <py-config>
+        [[fetch]]
+        files = ["swmain.py"]
+    </py-config>
+    <script type="py" src="q3d1.py"></script>
+</body>
+</html>
